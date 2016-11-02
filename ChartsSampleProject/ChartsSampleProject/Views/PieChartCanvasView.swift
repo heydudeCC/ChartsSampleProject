@@ -7,15 +7,28 @@
 //
 
 import UIKit
+import Charts
 
-class PieChartCanvasView: UIView {
+class PieChartCanvasView: UIView, ChartDrawer {
 
-  // Implement here
+  @IBOutlet weak private var pieChartView: PieChartView!
+  private var data: [PieChartDataModel]!
   
-}
-
-extension PieChartCanvasView: ChartDrawer {
-  func drawChart() {
-    // Implement here
+  static func createWithData(data: [PieChartDataModel]) -> PieChartCanvasView {
+    let pieChartCanvasView = Bundle.main.loadNibNamed("PieChartCanvasView", owner: nil, options: nil)?[0] as! PieChartCanvasView
+    pieChartCanvasView.data = data
+    pieChartCanvasView.drawChart()
+    return pieChartCanvasView
   }
+  
+  func updateData(data: [PieChartDataModel]) {
+    self.data = data
+    drawChart()
+  }
+  
+  func drawChart() {
+    let pieChartData = DataConverter.createPieChartData(pieChartData: data)
+    pieChartView.data = pieChartData
+  }
+  
 }

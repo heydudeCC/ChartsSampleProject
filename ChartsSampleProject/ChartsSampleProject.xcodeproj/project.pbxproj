@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9BFFC0D7A7A3C96D169072F0 /* Pods_ChartsSampleProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE9597F996C3EDAB641A487 /* Pods_ChartsSampleProject.framework */; };
+		AE03C9E91DC9CC9800A9A222 /* LineChartCanvasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE03C9E81DC9CC9800A9A222 /* LineChartCanvasView.xib */; };
+		AE03C9EB1DC9D21B00A9A222 /* PieChartCanvasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE03C9EA1DC9D21B00A9A222 /* PieChartCanvasView.xib */; };
+		AE03C9ED1DC9D2EE00A9A222 /* BarChartCanvasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE03C9EC1DC9D2EE00A9A222 /* BarChartCanvasView.xib */; };
+		AE03C9F41DC9EFBD00A9A222 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03C9F21DC9EFBD00A9A222 /* ChartViewController.swift */; };
+		AE03C9F51DC9EFBD00A9A222 /* ChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE03C9F31DC9EFBD00A9A222 /* ChartViewController.xib */; };
+		AE03C9F71DC9EFFA00A9A222 /* ChartCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03C9F61DC9EFFA00A9A222 /* ChartCanvas.swift */; };
 		AE80805B1DC9978A00167BF0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8080591DC9978A00167BF0 /* MainViewController.swift */; };
 		AE80805C1DC9978A00167BF0 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE80805A1DC9978A00167BF0 /* MainViewController.xib */; };
 		AE8080601DC997BB00167BF0 /* LineChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE80805E1DC997BB00167BF0 /* LineChartViewController.swift */; };
@@ -33,6 +39,12 @@
 
 /* Begin PBXFileReference section */
 		0F2ED85A0FDDB741A3FD7BB6 /* Pods-ChartsSampleProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartsSampleProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChartsSampleProject/Pods-ChartsSampleProject.debug.xcconfig"; sourceTree = "<group>"; };
+		AE03C9E81DC9CC9800A9A222 /* LineChartCanvasView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LineChartCanvasView.xib; path = Views/LineChartCanvasView.xib; sourceTree = "<group>"; };
+		AE03C9EA1DC9D21B00A9A222 /* PieChartCanvasView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PieChartCanvasView.xib; path = Views/PieChartCanvasView.xib; sourceTree = "<group>"; };
+		AE03C9EC1DC9D2EE00A9A222 /* BarChartCanvasView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BarChartCanvasView.xib; path = Views/BarChartCanvasView.xib; sourceTree = "<group>"; };
+		AE03C9F21DC9EFBD00A9A222 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartViewController.swift; path = ViewControllers/ChartViewController.swift; sourceTree = "<group>"; };
+		AE03C9F31DC9EFBD00A9A222 /* ChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChartViewController.xib; path = ViewControllers/ChartViewController.xib; sourceTree = "<group>"; };
+		AE03C9F61DC9EFFA00A9A222 /* ChartCanvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartCanvas.swift; path = Protocols/ChartCanvas.swift; sourceTree = "<group>"; };
 		AE8080591DC9978A00167BF0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/MainViewController.swift; sourceTree = "<group>"; };
 		AE80805A1DC9978A00167BF0 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = ViewControllers/MainViewController.xib; sourceTree = "<group>"; };
 		AE80805E1DC997BB00167BF0 /* LineChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineChartViewController.swift; path = ViewControllers/LineChartViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +103,8 @@
 				AE8080631DC997C800167BF0 /* PieChartViewController.xib */,
 				AE8080661DC997D200167BF0 /* BarChartViewController.swift */,
 				AE8080671DC997D200167BF0 /* BarChartViewController.xib */,
+				AE03C9F21DC9EFBD00A9A222 /* ChartViewController.swift */,
+				AE03C9F31DC9EFBD00A9A222 /* ChartViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -99,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				AE80806A1DC99C0400167BF0 /* ChartDrawer.swift */,
+				AE03C9F61DC9EFFA00A9A222 /* ChartCanvas.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -107,8 +122,11 @@
 			isa = PBXGroup;
 			children = (
 				AE80806D1DC99C9C00167BF0 /* LineChartCanvasView.swift */,
+				AE03C9E81DC9CC9800A9A222 /* LineChartCanvasView.xib */,
 				AE80806F1DC99CA700167BF0 /* PieChartCanvasView.swift */,
+				AE03C9EA1DC9D21B00A9A222 /* PieChartCanvasView.xib */,
 				AE8080711DC99CB000167BF0 /* BarChartCanvasView.swift */,
+				AE03C9EC1DC9D2EE00A9A222 /* BarChartCanvasView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -232,10 +250,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE8080651DC997C800167BF0 /* PieChartViewController.xib in Resources */,
+				AE03C9ED1DC9D2EE00A9A222 /* BarChartCanvasView.xib in Resources */,
 				AEC09E251DC9927E005E90E8 /* LaunchScreen.storyboard in Resources */,
 				AE8080611DC997BB00167BF0 /* LineChartViewController.xib in Resources */,
 				AE8080691DC997D200167BF0 /* BarChartViewController.xib in Resources */,
+				AE03C9F51DC9EFBD00A9A222 /* ChartViewController.xib in Resources */,
 				AE80805C1DC9978A00167BF0 /* MainViewController.xib in Resources */,
+				AE03C9E91DC9CC9800A9A222 /* LineChartCanvasView.xib in Resources */,
+				AE03C9EB1DC9D21B00A9A222 /* PieChartCanvasView.xib in Resources */,
 				AEC09E221DC9927E005E90E8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,12 +322,14 @@
 				AE80807E1DC99EDD00167BF0 /* BarChartDataModel.swift in Sources */,
 				AEC09E1B1DC9927E005E90E8 /* AppDelegate.swift in Sources */,
 				AE8080751DC99E0F00167BF0 /* LineChartCoordinatePair.swift in Sources */,
+				AE03C9F41DC9EFBD00A9A222 /* ChartViewController.swift in Sources */,
 				AE80806B1DC99C0400167BF0 /* ChartDrawer.swift in Sources */,
 				AE8080701DC99CA700167BF0 /* PieChartCanvasView.swift in Sources */,
 				AE8080601DC997BB00167BF0 /* LineChartViewController.swift in Sources */,
 				AE80807C1DC99E9500167BF0 /* PieChartDataPair.swift in Sources */,
 				AE8080641DC997C800167BF0 /* PieChartViewController.swift in Sources */,
 				AE80806E1DC99C9C00167BF0 /* LineChartCanvasView.swift in Sources */,
+				AE03C9F71DC9EFFA00A9A222 /* ChartCanvas.swift in Sources */,
 				AE80805B1DC9978A00167BF0 /* MainViewController.swift in Sources */,
 				AE8080681DC997D200167BF0 /* BarChartViewController.swift in Sources */,
 				AE8080781DC99E3800167BF0 /* LineChartDataModel.swift in Sources */,

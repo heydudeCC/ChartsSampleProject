@@ -7,15 +7,28 @@
 //
 
 import UIKit
+import Charts
 
-class BarChartCanvasView: UIView {
+class BarChartCanvasView: UIView, ChartDrawer {
 
-  // Implement here
+  @IBOutlet weak var barChartView: BarChartView!
+  private var data: [BarChartDataModel]!
   
-}
-
-extension BarChartCanvasView: ChartDrawer {
-  func drawChart() {
-    // Implement here
+  static func createWithData(data: [BarChartDataModel]) -> BarChartCanvasView {
+    let barChartCanvasView = Bundle.main.loadNibNamed("BarChartCanvasView", owner: nil, options: nil)?[0] as! BarChartCanvasView
+    barChartCanvasView.data = data
+    barChartCanvasView.drawChart()
+    return barChartCanvasView
   }
+  
+  func updateData(data: [BarChartDataModel]) {
+    self.data = data
+    drawChart()
+  }
+  
+  func drawChart() {
+    let barChartData = DataConverter.createBarChartData(barChartData: data)
+    barChartView.data = barChartData
+  }
+  
 }

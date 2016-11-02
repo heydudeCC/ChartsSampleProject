@@ -11,19 +11,19 @@ import Charts
 
 class DataConverter {
   
-  func createLineChartData(lineChartDataEntry: [LineChartDataModel]) -> LineChartData {
+  class func createLineChartData(lineChartData: [LineChartDataModel]) -> LineChartData {
     // Implement here
     
     return LineChartData()
   }
   
-  func createPieChartData(pieChartDataEntry: [PieChartDataModel]) -> PieChartData {
+  class func createPieChartData(pieChartData: [PieChartDataModel]) -> PieChartData {
     // Implement here
     
     return PieChartData()
   }
   
-  func createBarChartData(barChartData: [BarChartDataModel]) -> BarChartData {
+  class func createBarChartData(barChartData: [BarChartDataModel]) -> BarChartData {
     // Implement here
     
     return BarChartData()

@@ -10,26 +10,20 @@ import UIKit
 
 class LineChartViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  @IBOutlet weak private var chartCanvasView: UIView!
+  private var lineChartCanvasView: LineChartCanvasView!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    lineChartCanvasView = LineChartCanvasView.createWithData(data: [LineChartDataModel]())
+    chartCanvasView.addSubview(lineChartCanvasView)
+  }
+  
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    
+    lineChartCanvasView.frame = chartCanvasView.bounds
+  }
 
 }
