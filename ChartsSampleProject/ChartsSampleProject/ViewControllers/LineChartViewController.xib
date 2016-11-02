@@ -2,12 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11201"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LineChartViewController" customModule="ChartsSampleProject" customModuleProvider="target">
             <connections>
+                <outlet property="chartCanvasView" destination="aCS-Z2-nUy" id="Wj9-Ib-BeM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,17 +17,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzq-gM-ee1">
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCS-Z2-nUy">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="334" id="SG2-Ce-yg8"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="tzq-gM-ee1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fZH-tl-6Ki"/>
-                <constraint firstItem="tzq-gM-ee1" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="k5f-yw-NH8"/>
+                <constraint firstItem="aCS-Z2-nUy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aID-z9-v01"/>
+                <constraint firstAttribute="trailing" secondItem="aCS-Z2-nUy" secondAttribute="trailing" id="aIn-RY-dNP"/>
+                <constraint firstItem="aCS-Z2-nUy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="c1Y-gl-q7g"/>
             </constraints>
+            <point key="canvasLocation" x="26.5" y="52.5"/>
         </view>
     </objects>
 </document>

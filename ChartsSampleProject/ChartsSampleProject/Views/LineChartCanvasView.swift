@@ -7,15 +7,28 @@
 //
 
 import UIKit
+import Charts
 
-class LineChartCanvasView: UIView {
+class LineChartCanvasView: UIView, ChartDrawer {
 
-  // Implement here
-  
-}
+  @IBOutlet weak private var lineChartView: LineChartView!
+  private var data: [LineChartDataModel]!
 
-extension LineChartCanvasView: ChartDrawer {
-  func drawChart() {
-    // Implement here
+  static func createWithData(data: [LineChartDataModel]) -> LineChartCanvasView {
+    let lineChartCanvasView = Bundle.main.loadNibNamed("LineChartCanvasView", owner: nil, options: nil)?[0] as! LineChartCanvasView
+    lineChartCanvasView.data = data
+    lineChartCanvasView.drawChart()
+    return lineChartCanvasView
   }
+  
+  func updateData(data: [LineChartDataModel]) {
+    self.data = data
+    drawChart()
+  }
+  
+  func drawChart() {
+    let lineChartData = DataConverter.createLineChartData(lineChartData: data)
+    lineChartView.data = lineChartData
+  }
+  
 }

@@ -10,26 +10,30 @@ import UIKit
 
 class PieChartViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  @IBOutlet weak private var chartCanvasView: UIView!
+  private var pieChartCanvasView: PieChartCanvasView!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    let pieChartDataPair1 = PieChartDataPair(name: "Angelica", value: 96000)
+    let pieChartDataPair2 = PieChartDataPair(name: "Eliza", value: 32000)
+    let pieChartDataPair3 = PieChartDataPair(name: "Peggy", value: 16000)
+    
+    let pieChartData1 = PieChartDataModel(dataPair: pieChartDataPair1, color: UIColor.orange)
+    let pieChartData2 = PieChartDataModel(dataPair: pieChartDataPair2, color: UIColor.blue)
+    let pieChartData3 = PieChartDataModel(dataPair: pieChartDataPair3, color: UIColor.yellow)
+    
+    let data = [pieChartData1, pieChartData2, pieChartData3]
+    
+    pieChartCanvasView = PieChartCanvasView.createWithData(data: data)
+    chartCanvasView.addSubview(pieChartCanvasView)
+  }
+  
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    
+    pieChartCanvasView.frame = chartCanvasView.bounds
+  }
 
 }

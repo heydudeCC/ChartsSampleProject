@@ -2,12 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11201"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PieChartViewController" customModule="ChartsSampleProject" customModuleProvider="target">
             <connections>
+                <outlet property="chartCanvasView" destination="Bvr-zd-7qB" id="Wjj-lb-Sra"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,17 +17,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLZ-8Y-ASF">
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bvr-zd-7qB">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="334" id="lhm-fb-jMM"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="GLZ-8Y-ASF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kUi-Fm-ekt"/>
-                <constraint firstItem="GLZ-8Y-ASF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="reI-O9-0Xy"/>
+                <constraint firstItem="Bvr-zd-7qB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GuJ-ac-W0a"/>
+                <constraint firstItem="Bvr-zd-7qB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nUt-oC-Fbt"/>
+                <constraint firstAttribute="trailing" secondItem="Bvr-zd-7qB" secondAttribute="trailing" id="q40-0U-ITJ"/>
             </constraints>
+            <point key="canvasLocation" x="82.5" y="59.5"/>
         </view>
     </objects>
 </document>
