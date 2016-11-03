@@ -11,18 +11,12 @@ import UIKit
 class BarChartViewController: UIViewController {
 
   @IBOutlet weak private var chartCanvasView: UIView!
+  private var viewModel = BarChartSampleViewModel()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let data = [
-      BarChartDataModel(value: 96000, color: UIColor.red),
-      BarChartDataModel(value: 32000, color: UIColor.brown),
-      BarChartDataModel(value: 16000, color: UIColor.purple),
-      BarChartDataModel(value: 8000, color: UIColor.green)
-    ]
-    
-    let barChartCanvasView = BarChartCanvasView.createWithData(data: data)
+    let barChartCanvasView = BarChartCanvasView.createWithData(data: viewModel.data)
     barChartCanvasView.frame = chartCanvasView.frame
     chartCanvasView.addSubview(barChartCanvasView)
   }
