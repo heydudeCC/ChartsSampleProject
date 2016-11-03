@@ -12,21 +12,12 @@ class PieChartViewController: UIViewController {
 
   @IBOutlet weak private var chartCanvasView: UIView!
   private var pieChartCanvasView: PieChartCanvasView!
+  private let viewModel = PieChartSampleViewModel()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let pieChartDataPair1 = PieChartDataPair(name: "Angelica", value: 96000)
-    let pieChartDataPair2 = PieChartDataPair(name: "Eliza", value: 32000)
-    let pieChartDataPair3 = PieChartDataPair(name: "Peggy", value: 16000)
-    
-    let pieChartData1 = PieChartDataModel(dataPair: pieChartDataPair1, color: UIColor.orange)
-    let pieChartData2 = PieChartDataModel(dataPair: pieChartDataPair2, color: UIColor.blue)
-    let pieChartData3 = PieChartDataModel(dataPair: pieChartDataPair3, color: UIColor.yellow)
-    
-    let data = [pieChartData1, pieChartData2, pieChartData3]
-    
-    pieChartCanvasView = PieChartCanvasView.createWithData(data: data)
+    pieChartCanvasView = PieChartCanvasView.createWithData(data: viewModel.data)
     chartCanvasView.addSubview(pieChartCanvasView)
   }
   
