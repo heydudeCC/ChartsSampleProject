@@ -30,6 +30,7 @@ class DataConverter {
     let dataSets = lineChartDataEntries.enumerated().map { (index, element) -> LineChartDataSet in
       let dataSet = LineChartDataSet(values: element, label: "")
       dataSet.colors = [lineChartColors[index]]
+      dataSet.mode = .cubicBezier
       return dataSet
     }
     

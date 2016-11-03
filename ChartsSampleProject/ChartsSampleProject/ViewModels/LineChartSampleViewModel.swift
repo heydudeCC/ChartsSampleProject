@@ -32,19 +32,19 @@ class LineChartSampleViewModel: NSObject {
     ]
     
     let coordinatePairs2 = [
-      LineChartCoordinatePair(xAxis: 2, yAxis: 20),
+      LineChartCoordinatePair(xAxis: 2, yAxis: 200),
       LineChartCoordinatePair(xAxis: 3, yAxis: 21),
       LineChartCoordinatePair(xAxis: 4, yAxis: 22),
-      LineChartCoordinatePair(xAxis: 5, yAxis: 23),
+      LineChartCoordinatePair(xAxis: 5, yAxis: 203),
       LineChartCoordinatePair(xAxis: 6, yAxis: 24),
       LineChartCoordinatePair(xAxis: 7, yAxis: 25),
-      LineChartCoordinatePair(xAxis: 8, yAxis: 26),
+      LineChartCoordinatePair(xAxis: 8, yAxis: 236),
       LineChartCoordinatePair(xAxis: 9, yAxis: 27),
       LineChartCoordinatePair(xAxis: 10, yAxis: 29)
     ]
     
     data = [
-      LineChartDataModel(coordinatePairs: coordinatePairs1, color: UIColor.orange),
+//      LineChartDataModel(coordinatePairs: coordinatePairs1, color: UIColor.orange),
       LineChartDataModel(coordinatePairs: coordinatePairs2, color: UIColor.brown)
     ]
   }

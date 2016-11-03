@@ -9,14 +9,16 @@
 import UIKit
 import Charts
 
-class LineChartCanvasView: UIView, ChartDrawer {
+class LineChartCanvasView: UIView {
 
-  @IBOutlet weak private var lineChartView: LineChartView!
-  private var data: [LineChartDataModel]!
+  @IBOutlet weak fileprivate var lineChartView: LineChartView!
+  @IBOutlet weak fileprivate var selectedValueLabel: UILabel!
+  fileprivate var data: [LineChartDataModel]!
 
   static func createWithData(data: [LineChartDataModel]) -> LineChartCanvasView {
     let lineChartCanvasView = Bundle.main.loadNibNamed("LineChartCanvasView", owner: nil, options: nil)?[0] as! LineChartCanvasView
     lineChartCanvasView.data = data
+    lineChartCanvasView.setLineChartViewDelegate()
     lineChartCanvasView.drawChart()
     return lineChartCanvasView
   }
@@ -26,6 +28,12 @@ class LineChartCanvasView: UIView, ChartDrawer {
     drawChart()
   }
   
+  private func setLineChartViewDelegate() {
+    lineChartView.delegate = self
+  }
+}
+
+extension LineChartCanvasView: ChartDrawer {
   func drawChart() {
     let lineChartData = DataConverter.createLineChartData(lineChartData: data)
     lineChartView.data = lineChartData
@@ -36,5 +44,15 @@ class LineChartCanvasView: UIView, ChartDrawer {
     lineChartView.doubleTapToZoomEnabled = false
     lineChartView.chartDescription = nil
   }
+}
+
+extension LineChartCanvasView: ChartViewDelegate {
+  func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+    selectedValueLabel.isHidden = false
+    selectedValueLabel.text = "X: \(entry.x), Y: \(entry.y)"
+  }
   
+  func chartValueNothingSelected(_ chartView: ChartViewBase) {
+    selectedValueLabel.isHidden = true
+  }
 }
