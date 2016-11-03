@@ -20,7 +20,7 @@
             <constraints>
                 <constraint firstItem="KRc-vF-1yf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Auu-Ra-L2d"/>
                 <constraint firstAttribute="trailing" secondItem="KRc-vF-1yf" secondAttribute="trailing" id="Nkl-hQ-toR"/>
-                <constraint firstAttribute="bottom" secondItem="KRc-vF-1yf" secondAttribute="bottom" constant="15" id="tRb-c6-BK2"/>
+                <constraint firstAttribute="bottom" secondItem="KRc-vF-1yf" secondAttribute="bottom" constant="50" id="tRb-c6-BK2"/>
                 <constraint firstItem="KRc-vF-1yf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="x0x-B3-u8w"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

@@ -14,22 +14,21 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCS-Z2-nUy">
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="334" id="SG2-Ce-yg8"/>
-                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="aCS-Z2-nUy" secondAttribute="bottom" id="UZ7-S1-fC8"/>
                 <constraint firstItem="aCS-Z2-nUy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aID-z9-v01"/>
                 <constraint firstAttribute="trailing" secondItem="aCS-Z2-nUy" secondAttribute="trailing" id="aIn-RY-dNP"/>
                 <constraint firstItem="aCS-Z2-nUy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="c1Y-gl-q7g"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="26.5" y="52.5"/>
         </view>
     </objects>

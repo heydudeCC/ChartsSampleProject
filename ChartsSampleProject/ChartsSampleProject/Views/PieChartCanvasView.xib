@@ -15,21 +15,21 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5E-OI-LDj" customClass="PieChartView" customModule="Charts">
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="225" id="EBq-Gh-xVK"/>
-                        <constraint firstAttribute="height" constant="225" id="R4h-1d-yzM"/>
+                        <constraint firstAttribute="width" constant="300" id="EBq-Gh-xVK"/>
+                        <constraint firstAttribute="height" constant="300" id="R4h-1d-yzM"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Y5E-OI-LDj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="44T-MW-1Or"/>
-                <constraint firstItem="Y5E-OI-LDj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qFs-tE-cOB"/>
+                <constraint firstItem="Y5E-OI-LDj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4z5-yC-kYV"/>
+                <constraint firstItem="Y5E-OI-LDj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="T3e-qE-X7e"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="pieChartView" destination="Y5E-OI-LDj" id="wK6-2c-fp1"/>
             </connections>
-            <point key="canvasLocation" x="26.5" y="53"/>
+            <point key="canvasLocation" x="183" y="121"/>
         </view>
     </objects>
 </document>
