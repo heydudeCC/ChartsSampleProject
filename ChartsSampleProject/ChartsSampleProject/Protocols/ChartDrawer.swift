@@ -8,6 +8,7 @@
 
 import Foundation
 
-protocol ChartDrawer {
+@objc protocol ChartDrawer {
   func drawChart()
+  @objc optional func customizeView()
 }

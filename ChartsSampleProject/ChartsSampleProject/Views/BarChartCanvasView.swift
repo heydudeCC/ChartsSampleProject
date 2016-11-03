@@ -31,4 +31,8 @@ class BarChartCanvasView: UIView, ChartDrawer {
     barChartView.data = barChartData
   }
   
+  func customizeView() {
+    barChartView.chartDescription = nil
+  }
+  
 }

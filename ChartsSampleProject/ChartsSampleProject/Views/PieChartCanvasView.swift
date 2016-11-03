@@ -29,6 +29,11 @@ class PieChartCanvasView: UIView, ChartDrawer {
   func drawChart() {
     let pieChartData = DataConverter.createPieChartData(pieChartData: data)
     pieChartView.data = pieChartData
+    customizeView()
+  }
+  
+  func customizeView() {
+    pieChartView.chartDescription = nil
   }
   
 }

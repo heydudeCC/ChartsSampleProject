@@ -29,6 +29,12 @@ class LineChartCanvasView: UIView, ChartDrawer {
   func drawChart() {
     let lineChartData = DataConverter.createLineChartData(lineChartData: data)
     lineChartView.data = lineChartData
+    customizeView()
+  }
+  
+  func customizeView() {
+    lineChartView.doubleTapToZoomEnabled = false
+    lineChartView.chartDescription = nil
   }
   
 }
