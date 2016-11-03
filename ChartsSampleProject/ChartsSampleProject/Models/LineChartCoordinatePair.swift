@@ -9,6 +9,6 @@
 import Foundation
 
 struct LineChartCoordinatePair {
-  let xAxis: String
+  let xAxis: Double
   let yAxis: Double
 }
